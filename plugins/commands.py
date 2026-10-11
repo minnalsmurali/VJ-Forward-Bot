@@ -62,7 +62,11 @@ async def helpcb(bot, query):
 
 @Client.on_callback_query(filters.regex(r'^how_to_use'))
 async def how_to_use(bot, query):
-    buttons = [[InlineKeyboardButton('• back', callback_data='help')]]
+    buttons = [[
+        InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ❓', url='https://youtu.be/Nm2fdF-nOpU')
+    ],[
+        InlineKeyboardButton('• back', callback_data='back')
+    ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await query.message.edit_text(
         text=Script.HOW_USE_TXT,
