@@ -1,11 +1,20 @@
+import os
 from flask import Flask, render_template, jsonify
 
-app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+WEB_DIR = os.path.join(BASE_DIR, "web")
+
+app = Flask(
+    __name__,
+    template_folder=WEB_DIR,
+    static_folder=WEB_DIR,
+    static_url_path="/static",
+)
 
 # Replace these with your real links
 LINKS = {
-    "tutorial": "https://youtube.com/@Tech_VJ",   # How To Create Free
-    "setup":    "https://youtu.be/A-iIh_5WAlk",   # How To Setup Bot
+    "tutorial": "https://youtu.be/XnBzS4B6_gA",   # How To Create Free
+    "setup":    "https://youtu.be/Nm2fdF-nOpU",   # How To Setup Bot
     "try_bot":  "https://t.me/FilezForvadBoT",    # Try Forward Bot
 }
 
