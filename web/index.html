@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forward Bot | Smart. Clean. Full Control.</title>
+  <meta name="description" content="Auto-forward messages between Telegram channels with filters, custom captions and buttons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="wrap">
+    <section class="intro">
+      <p class="status" id="status"><span class="dot"></span><span id="statusText">Checking server…</span></p>
+      <h1>Forward Bot</h1>
+      <p class="tag">Smart. Clean. Full control.</p>
+      <p class="lead">Forward every message from one Telegram channel to another. Filter what you don't want, add your own caption and buttons, and pick up where you left off after a restart.</p>
+      <a class="btn go" href="{{ links.try_bot }}" target="_blank" rel="noopener">Try Forward Bot</a>
+    </section>
+
+    <section class="card" aria-label="Forward Bot features">
+      <div class="bubble">
+        <h2 class="reveal">🔥 FORWARD ⚡ BOT 🔥</h2>
+        <p class="sub reveal">⚡ Smart. Clean. Full Control. ⚡</p>
+        <p class="quote reveal">🎯 Auto Forwarding System</p>
+
+        <ul class="features" id="features">
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="Forward from any public channel using the bot itself. Just add it as an admin of the target channel.">🌀 <em>Public Forward</em> (Bot Mode)</button></li>
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="Forward from private chats and channels by logging in a user session. Your session stays in your own database.">🔒 <em>Private Forward</em> (User Bot)</button></li>
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="Replace the original caption with your own text and attach inline buttons to every forwarded message.">✏️ <em>Custom Caption</em> &amp; Buttons</button></li>
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="Messages already forwarded are detected and skipped, so your target channel never gets the same file twice.">🚫 <em>Skip Duplicates Automatically</em></button></li>
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="Choose which message types to send, set a maximum file size, and block or allow keywords.">⚙️ <em>Filter by Type | Size | Keywords</em></button></li>
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="Leave out files by extension, for example .zip or .apk, without touching anything else.">📂 <em>Skip Unwanted Extensions</em></button></li>
+          <li class="reveal"><button type="button" aria-pressed="false" data-detail="If the server restarts, every unfinished forwarding task continues from the last message it sent.">🔄 <em>Auto Resume After Restart</em></button></li>
+        </ul>
+
+        <p class="detail" id="detail" aria-live="polite">Tap a feature to see what it does.</p>
+
+        <div class="meta">
+          <div class="reacts">
+            <button type="button" class="react" data-count="3" aria-pressed="false">❤️ <span>3</span></button>
+            <button type="button" class="react" data-count="1" aria-pressed="false">🔥 <span>1</span></button>
+          </div>
+          <span class="views">👁 5.7K &nbsp;1:00 PM</span>
+        </div>
+      </div>
+
+      <div class="votes">
+        <button type="button" class="vote" data-count="10" aria-pressed="false">👍 <span>10</span></button>
+        <button type="button" class="vote" data-count="2" aria-pressed="false">👎 <span>2</span></button>
+      </div>
+
+      <a class="btn green" href="{{ links.tutorial }}" target="_blank" rel="noopener">▶ How To Create Free</a>
+      <a class="btn red" href="{{ links.setup }}" target="_blank" rel="noopener">How To Setup Bot</a>
+      <a class="btn dark" href="{{ links.try_bot }}" target="_blank" rel="noopener">Try Forward Bot</a>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
