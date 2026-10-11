@@ -11,17 +11,19 @@ app = Flask(
     static_url_path="/static",
 )
 
-# Replace these with your real links
+BRAND = "@iqbaleditzz"
+
 LINKS = {
     "tutorial": "https://youtu.be/XnBzS4B6_gA",   # How To Create Free
     "setup":    "https://youtu.be/Nm2fdF-nOpU",   # How To Setup Bot
     "try_bot":  "https://t.me/FilezForvadBoT",    # Try Forward Bot
+    "brand":    "https://t.me/iqbaleditzz",       # your channel / profile (change if needed)
 }
 
 
 @app.route("/")
 def home():
-    return render_template("index.html", links=LINKS)
+    return render_template("index.html", brand=BRAND, links=LINKS)
 
 
 @app.route("/health")
