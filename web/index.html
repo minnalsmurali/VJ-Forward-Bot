@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>.foot span+span{margin-left:18px}</style>
 </head>
 <body>
   <header class="top">
@@ -60,7 +61,7 @@
     </section>
   </main>
 
-  <footer class="foot">Made by <a href="{{ links.brand }}" target="_blank" rel="noopener">{{ brand }}</a></footer>
+  <footer class="foot"><span>Made by <a href="{{ links.brand }}" target="_blank" rel="noopener">{{ brand }}</a></span> <span><a href="{{ url_for('privacy') }}">Privacy Policy</a></span></footer>
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

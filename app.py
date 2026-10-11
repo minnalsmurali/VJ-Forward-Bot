@@ -26,6 +26,11 @@ def home():
     return render_template("index.html", brand=BRAND, links=LINKS)
 
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html", brand=BRAND, links=LINKS)
+
+
 @app.route("/health")
 def health():
     return jsonify(status="ok")

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacy Policy | File Forward Bot by {{ brand }}</title>
+  <meta name="description" content="Privacy Policy for File Forward Bot: what data is processed and how it is used.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .doc{max-width:760px;padding-bottom:24px}
+    .doc h1{font:800 clamp(2.2rem,8vw,3.6rem)/1.05 "Bricolage Grotesque",system-ui,sans-serif;margin:.2em 0 .3em;letter-spacing:-.02em}
+    .doc .intro{color:var(--muted);font-size:1.1rem;margin:0 0 2rem}
+    .doc .back{display:inline-block;margin-top:28px;text-decoration:none;color:var(--muted);font-weight:600}
+    .doc .back:hover{color:var(--blue)}
+    .doc .updated{font-size:.85rem;color:var(--muted);margin:0 0 .6rem}
+    .pol{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin:0 0 12px;
+      opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease,border-color .25s}
+    .pol.in{opacity:1;transform:none}
+    .pol:hover{border-color:var(--blue)}
+    .pol h2{font:800 1.2rem "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 .4rem}
+    .pol p{margin:0;color:var(--muted)}
+    .pol a{color:var(--blue)}
+    .foot span+span{margin-left:18px}
+    @media(prefers-reduced-motion:reduce){.pol{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="{{ links.brand }}" target="_blank" rel="noopener">{{ brand }}</a>
+    <a class="btn ghost" style="padding:8px 18px" href="{{ url_for('home') }}">Home</a>
+  </header>
+
+  <main class="doc">
+    <p class="updated">Last updated: October 11, 2026</p>
+    <h1>Privacy Policy for File Forward Bot</h1>
+    <p class="intro">We respect your privacy and are committed to protecting your data.</p>
+
+    <section class="pol">
+      <h2>Data Collection</h2>
+      <p>We only process the messages, media, and channel IDs required to execute your configured auto-forwarding tasks.</p>
+    </section>
+
+    <section class="pol">
+      <h2>Data Usage</h2>
+      <p>Your data is used exclusively to provide forwarding, filtering, and customization features. We do not store, read, or share personal files or chat contents with third parties.</p>
+    </section>
+
+    <section class="pol">
+      <h2>User Bots and Tokens</h2>
+      <p>If you use a userbot session, it is strictly used for private forwarding execution and remains secure.</p>
+    </section>
+
+    <section class="pol">
+      <h2>Questions and Data Removal</h2>
+      <p>For any privacy-related queries or data removal requests, contact the bot administrator at <a href="{{ links.brand }}" target="_blank" rel="noopener">{{ brand }}</a>.</p>
+    </section>
+
+    <a class="back" href="{{ url_for('home') }}">Back to home</a>
+  </main>
+
+  <footer class="foot"><span>Made by <a href="{{ links.brand }}" target="_blank" rel="noopener">{{ brand }}</a></span></footer>
+
+  <script>
+    (function () {
+      var cards = document.querySelectorAll('.pol');
+      if (!('IntersectionObserver' in window)) { cards.forEach(function (c) { c.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.15 });
+      cards.forEach(function (c, i) { c.style.transitionDelay = (i * 80) + 'ms'; io.observe(c); });
+    })();
+  </script>
+</body>
+</html>
