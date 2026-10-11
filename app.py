@@ -11,6 +11,9 @@ app = Flask(
     static_url_path="/static",
 )
 
+# Always serve the latest CSS/JS (old Flask caches static files for 12 hours)
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
+
 BRAND = "@iqbaleditzz"
 
 LINKS = {
