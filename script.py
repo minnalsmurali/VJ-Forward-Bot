@@ -4,7 +4,7 @@ from config import Config
 class  Script(object):
   START_TXT = """<b>ʜɪ {}
   
-ɪ'ᴍ ᴀ ᴀᴅᴠᴀɴᴄᴇᴅ ꜰᴏʀᴡᴀʀᴅ ʙᴏᴛ
+ɪ'ᴍ ᴀ ᴀᴅᴠᴀɴᴄᴇᴅ [ꜰᴏʀᴡᴀʀᴅ ʙᴏᴛ](https://parental-deirdre-minnalmuralis-05440beb.koyeb.app)
 ɪ ᴄᴀɴ ꜰᴏʀᴡᴀʀᴅ ᴀʟʟ ᴍᴇssᴀɢᴇ ꜰʀᴏᴍ ᴏɴᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀɴɴᴇʟ</b>
 
 **ᴄʟɪᴄᴋ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ᴍᴇ**"""
@@ -33,10 +33,10 @@ class  Script(object):
 ► __if the **From Channel** is private your userbot must be member in there or your bot must need admin permission in there also__
 ► __Then use /forward to forward messages__
 
-► ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ [ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ](https://t.me/IET_Owner/724)</b>"""
+► ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ Watch ᴛᴜᴛᴏʀɪᴀʟ ᴠɪᴅᴇᴏ 👇</b>"""
   
   ABOUT_TXT = """<b>
-╔════❰ ғᴏʀᴡᴀʀᴅ ʙᴏᴛ ❱═❍⊱❁۪۪
+╔════❰ [ғᴏʀᴡᴀʀᴅ ʙᴏᴛ](https://parental-deirdre-minnalmuralis-05440beb.koyeb.app) ❱═❍⊱❁۪۪
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼📃ʙᴏᴛ : [Fᴏʀᴡᴀᴅ Bᴏᴛ](https://t.me/FilezForvadBoT)
 ║┣⪼👦Cʀᴇᴀᴛᴏʀ : [ɪǫʙᴀʟ ᴋ ᴀ 👑](https://t.me/iet_owner)
